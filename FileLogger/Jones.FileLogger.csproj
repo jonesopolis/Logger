@@ -48,7 +48,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ILogger\Jones.Logger.csproj">
+    <ProjectReference Include="..\Logger\Jones.Logger.csproj">
       <Project>{81b31903-411e-435c-a862-259b9d7f854c}</Project>
       <Name>Jones.Logger</Name>
     </ProjectReference>
