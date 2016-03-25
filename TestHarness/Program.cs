@@ -12,7 +12,7 @@ namespace TestHarness
     {
         static void Main(string[] args)
         {
-            Logger logger = new FileLogger(@"C:\Users\Jonesy\Desktop\logs.txt", LogLevel.Warning);
+            Logger logger = new FileLogger("myPrecious.txt",LogLevel.Warning);
 
             logger.Log(LogLevel.Info, "Info!!");
             logger.Log(LogLevel.Warning, "Warning!!");

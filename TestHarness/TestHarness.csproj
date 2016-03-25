@@ -51,9 +51,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\FileLogger\Jones.FileLogger.csproj">
       <Project>{bab494a4-549e-4840-8538-4eda47f7b9ab}</Project>
       <Name>Jones.FileLogger</Name>

@@ -7,13 +7,28 @@ namespace Jones.FileLogger
 {
     public sealed class FileLogger : Logger.Logger
     {
-        private readonly string _filePath;    
+        private readonly string _filePath;
+
+        public FileLogger(LogLevel logLevel) : base(logLevel)
+        {
+            _filePath = Path.Combine(Environment.CurrentDirectory, "log.txt");
+
+            if (!File.Exists(_filePath))
+            {
+                using (var fs = File.Create(_filePath)) { }
+            }
+        }
 
         public FileLogger(string filePath, LogLevel logLevel) : base(logLevel)
         {
             if (filePath == null)
             {
                 throw new ArgumentNullException(nameof(filePath));
+            }
+
+            if (!Path.IsPathRooted(filePath))
+            {
+                filePath = Path.Combine(Environment.CurrentDirectory, filePath);
             }
 
             _filePath = filePath;
