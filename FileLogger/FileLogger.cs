@@ -25,10 +25,7 @@ namespace Jones.FileLogger
 
             if (!File.Exists(_filePath))
             {
-                using (var fs = File.Create(_filePath))
-                {
-                    
-                }
+                using (var fs = File.Create(_filePath)) { }
             }
         }
 
@@ -73,9 +70,9 @@ namespace Jones.FileLogger
             {
                 using (var writer = new StreamWriter(fs))
                 {
-                    writer.Write(GetMessageString(message));
-                    writer.Write(GetExceptionString(ex));
-                    writer.Write(GetCallerInfoString(memberName, lineNumber));
+                    writer.WriteLine(GetMessageString(message));
+                    writer.WriteLine(GetExceptionString(ex));
+                    writer.WriteLine(GetCallerInfoString(memberName, lineNumber));
                 }
             }
         }
