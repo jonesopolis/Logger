@@ -34,10 +34,5 @@ namespace TestHarness
             }
 
         }
-
-        public void Do()
-        {
-           
-        }
     }
 }
